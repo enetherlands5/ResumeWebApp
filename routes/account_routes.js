@@ -1,7 +1,3 @@
-/**
- * Created by student on 11/30/2016.
- */
-
 var express = require('express');
 var router = express.Router();
 var account_dal = require('../model/account_dal');
@@ -14,7 +10,7 @@ router.get('/all', function(req, res) {
             res.send(err);
         }
         else {
-            res.render('account/accountViewAll', { 'result':result });
+            res.render('account/accountViewAll', { 'result': result });
         }
     });
 

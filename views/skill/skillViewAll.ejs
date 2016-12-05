@@ -1,16 +1,16 @@
 <html>
 <head>
-    <title>Skills</title>
+    <title>skills</title>
 </head>
 <body>
-<h1>Skills</h1>
+<h1>skills</h1>
 <table border="1">
-    <tr><th>skill ID</th><th>Name</th><th>address_id</th></tr>
+    <tr><th>skill ID</th><th>Name</th><th>description</th></tr>
     <% for(var i=0; result.length > i; i++ ) { %>
     <tr>
         <td><%= result[i].skill_id%></td>
-        <td><a href="/skill/?skill_id=<%= result[i].skill_id %>"><%= result[i].skill_name %></a></td>
-        <td><%= result[i].address_id %></td>
+        <td><a href="/skill/?skill_id=<%= result[i].skill_id %>"><%= result[i].name %></a></td>
+        <td><%= result[i].description %></td>
     </tr>
     <% } %>
 </table>

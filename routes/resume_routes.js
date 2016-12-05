@@ -1,3 +1,7 @@
+/**
+ * Created by student on 11/30/2016.
+ */
+
 var express = require('express');
 var router = express.Router();
 var resume_dal = require('../model/resume_dal');
@@ -10,7 +14,7 @@ router.get('/all', function(req, res) {
             res.send(err);
         }
         else {
-            res.render('resume/resumeViewAll', { 'result':result });
+            res.render('resume/resumeViewAll', { 'result': result });
         }
     });
 
