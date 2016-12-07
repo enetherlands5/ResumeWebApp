@@ -1,17 +1,23 @@
 <html>
 <head>
-    <title>skills</title>
+    <title>Skills</title>
 </head>
 <body>
 <h1>skills</h1>
+<a href="/skill/add">Add Skill</a> <br />
+
+<br />
 <table border="1">
-    <tr><th>skill ID</th><th>Name</th><th>description</th></tr>
+    <tr><th>Name</th><th>Description</th><th>Action</th></tr>
     <% for(var i=0; result.length > i; i++ ) { %>
     <tr>
-        <td><%= result[i].skill_id%></td>
         <td><a href="/skill/?skill_id=<%= result[i].skill_id %>"><%= result[i].name %></a></td>
         <td><%= result[i].description %></td>
-    </tr>
+    <td><form action="/skill/delete/">
+            <input type="hidden" name="skill_id" id="skill_id" value="<%= result[i].skill_id %>" />
+            <input type="submit" value="Delete"/>
+        </form>
+    </td>
     <% } %>
 </table>
 </body>
