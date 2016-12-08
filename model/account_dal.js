@@ -32,7 +32,7 @@ exports.insert = function(params, callback) {
 
     // the question marks in the sql query above will be replaced by the values of the
     // the data in queryData
-    var queryData = [params.account_name, params.address_id];
+    var queryData = [params.email, params.first_name, params.last_name];
 
     connection.query(query, queryData, function(err, result) {
         callback(err, result);

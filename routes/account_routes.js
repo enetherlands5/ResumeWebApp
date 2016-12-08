@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var account_dal = require('../model/account_dal');
-var address_dal = require('../model/address_dal');
+
 
 
 // View All accounts
@@ -37,12 +37,12 @@ router.get('/', function(req, res){
 // Return the add a new account form
 router.get('/add', function(req, res){
     // passing all the query parameters (req.query) to the insert function instead of each individually
-    address_dal.getAll(function(err,result) {
+    account_dal.getAll(function(err,result) {
         if (err) {
             res.send(err);
         }
         else {
-            res.render('account/accountAdd', {'address': result});
+            res.render('account/accountAdd', {'account': result});
         }
     });
 });
@@ -50,11 +50,14 @@ router.get('/add', function(req, res){
 // insert a account record
 router.get('/insert', function(req, res){
     // simple validation
-    if(req.query.account_name == null) {
+    if(req.query.first_name == null) {
         res.send('account Name must be provided.');
     }
-    else if(req.query.address_id == null) {
-        res.send('An Address must be selected');
+    else if(req.query.last_name == null) {
+        res.send('account Name must be provided.');
+    }
+    else if(req.query.email == null) {
+        res.send('An Email must be selected');
     }
     else {
         // passing all the query parameters (req.query) to the insert function instead of each individually
