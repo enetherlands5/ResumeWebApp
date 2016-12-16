@@ -10,8 +10,12 @@
           <option name="url" value="https://github.com/enetherlands5/355Project2.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/enetherlands5/ResumeWebApp.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
-    <option name="cloneParentDir" value="C:\Users\student\WebstormProjects\MyResumeWebApp" />
+    <option name="cloneParentDir" value="C:\Users\student\WebstormProjects\TheResumeWebApp" />
   </component>
 </application>
