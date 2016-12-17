@@ -4,7 +4,7 @@ var resume_dal = require('../model/resume_dal');
 var account_dal = require('../model/account_dal');
 
 
-// View All resumes
+
 router.get('/all', function(req, res) {
     resume_dal.getAll(function(err, result){
         if(err) {

@@ -3,7 +3,7 @@ var router = express.Router();
 var company_dal = require('../model/company_dal');
 
 
-// View All companys
+
 router.get('/all', function(req, res) {
     company_dal.getAll(function(err, result){
         if(err) {

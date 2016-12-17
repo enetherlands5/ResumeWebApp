@@ -4,7 +4,7 @@ var account_dal = require('../model/account_dal');
 var address_dal = require('../model/address_dal');
 
 
-// View All accounts
+
 router.get('/all', function(req, res) {
     account_dal.getAll(function(err, result){
         if(err) {

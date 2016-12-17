@@ -4,11 +4,6 @@ var db  = require('./db_connection.js');
 /* DATABASE CONFIGURATION */
 var connection = mysql.createConnection(db.config);
 
-/*
- create or replace view address_view as
- select s.*, a.street, a.zip_code from address s
- join address a on a.address_id = s.address_id;
- */
 
 exports.getAll = function(callback) {
     var query = 'SELECT * FROM address;';
