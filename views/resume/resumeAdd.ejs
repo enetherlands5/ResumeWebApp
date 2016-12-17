@@ -1,10 +1,6 @@
-<html>
-<head>
-    <title>Add New resume</title>
-</head>
-<body>
+<%- include("../includes/header.ejs", {title:"Add New Resume"}); %>
+
 <h1>Add New resume</h1>
-<a href="/">Home</a> <br />
 <form action="/resume/insert" method="get">
     resume Name: <input id="resume_name" name="resume_name" type="text" />
     <br />
@@ -19,6 +15,5 @@
     <input type="submit" />
 
 </form>
-</body>
 
-</html>
+<%- include("../includes/footer.ejs"); %>

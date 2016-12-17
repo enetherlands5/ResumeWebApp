@@ -1,15 +1,11 @@
-<html>
-<head>
-    <title>Addresses</title>
-</head>
-<body>
+<%- include("../includes/header.ejs", {title:"Address - View All"}); %>
+
 <h1>Addresses</h1>
-<a href="/">Home</a> <br />
 <a href="/address/add">Add New Address</a> <br />
 
 <br />
 <table border="1">
-    <tr><th>Street</th><th>Zip Code</th><th>Action</th></tr>
+    <tr><th>Name</th><th>Zip Code</th><th>Action</th></tr>
     <% for(var i=0; result.length > i; i++ ) { %>
     <tr>
         <td><a href="/address/?address_id=<%= result[i].address_id %>"><%= result[i].street %></a></td>
@@ -22,6 +18,5 @@
     </tr>
     <% } %>
 </table>
-</body>
 
-</html>
+<%- include("../includes/footer.ejs"); %>

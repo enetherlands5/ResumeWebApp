@@ -1,10 +1,6 @@
-<html>
-<head>
-    <title>Skills</title>
-</head>
-<body>
+<%- include("../includes/header.ejs", {title:"Skill - View All"}); %>
+
 <h1>skills</h1>
-<a href="/">Home</a> <br />
 <a href="/skill/add">Add Skill</a> <br />
 
 <br />
@@ -14,12 +10,12 @@
     <tr>
         <td><a href="/skill/?skill_id=<%= result[i].skill_id %>"><%= result[i].name %></a></td>
         <td><%= result[i].description %></td>
-    <td><form action="/skill/delete/">
-            <input type="hidden" name="skill_id" id="skill_id" value="<%= result[i].skill_id %>" />
-            <input type="submit" value="Delete"/>
-        </form>
-    </td>
-    <% } %>
+        <td><form action="/skill/delete/">
+                <input type="hidden" name="skill_id" id="skill_id" value="<%= result[i].skill_id %>" />
+                <input type="submit" value="Delete"/>
+            </form>
+        </td>
+        <% } %>
 </table>
 </body>
 
